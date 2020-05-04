@@ -2,12 +2,12 @@
     @csrf
     {{-- Post body --}}
     <div class="form-group">
-      <label for="body">descreva seu surto</label>
+      <label for="body">você não está sozinha</label>
       <textarea class="form-control"
                 name="body"
                 id="body"
                 rows="3"
-                placeholder="conte-nos aqui seu surto..."
+                placeholder="abra seu coração..."
                 required
                 style="resize: none;"></textarea>
 
