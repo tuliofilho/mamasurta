@@ -15,3 +15,7 @@ use Illuminate\Support\Facades\Route;
 
 // Dashboard
 Route::get('/', 'HomeController@index')->name('home');
+
+// Posts resourcfull controllers routes
+Route::resource('posts', 'PostController');
+
