@@ -2,7 +2,7 @@
 
 @section('content')
 {{-- List all posts --}}
-<div class="card-columns">
+<div class="card-columns mx-auto justify-content-center ">
     @forelse ($posts as $post)
     <div class="card border-primary" style="max-width: 18rem;">
         <div class="card-body">
