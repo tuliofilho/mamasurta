@@ -2,19 +2,20 @@
 
 @section('content')
 {{-- List all posts --}}
-<div class="card-columns mx-auto justify-content-center ">
-    @forelse ($posts as $post)
-    <div class="card border-primary" style="max-width: 18rem;">
-        <div class="card-body">
-            <p class="card-text">{{ $post->body }}</p>
+<div class="row mx-auto d-flex justify-content-center">
+    <div class="card-columns justify-content-center">
+        @forelse ($posts as $post)
+        <div class="card border-primary mx-auto" style="max-width: 18rem;">
+            <div class="card-body ">
+                <p class="card-text">{{ $post->body }}</p>
+            </div>
+            <small class="card-footer bg-transparent float-left text-muted border-white">{{ $post->created_at->diffForHumans() }}</small>
         </div>
-    {{-- creation time --}}
-    <small class="card-footer bg-transparent float-left text-muted border-white">{{ $post->created_at->diffForHumans() }}</small>
+        @empty
+        <p>sem surtos ainda!</p>
+        @endforelse
+    </div>
 </div>
-@empty
-<p>sem surtos ainda!</p>
 
-@endforelse
-</div>
 
 @endsection
