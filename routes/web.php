@@ -15,18 +15,3 @@ use Illuminate\Support\Facades\Route;
 
 // Dashboard
 Route::get('/', 'HomeController@index')->name('home');
-
-// Posts resourcfull controllers routes
-Route::resource('posts', 'PostController');
-
-// Comments routes
-Route::group(['prefix' => '/comments', 'as' => 'comments.'], function() {
-    // store comment route
-    Route::post('/{post}', 'CommentController@store')->name('store');
-});
-
-// Replies routes
-Route::group(['prefix' => '/replies', 'as' => 'replies.'], function() {
-    // store reply route
-    Route::post('/{comment}', 'ReplyController@store')->name('store');
-});
