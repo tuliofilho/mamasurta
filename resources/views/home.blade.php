@@ -6,7 +6,7 @@
     @forelse ($posts as $post)
     <div class="card border-primary" style="max-width: 18rem;">
         <div class="card-body">
-            <p class="card-text text-info">{{ $post->body }}</p>
+            <p class="card-text">{{ $post->body }}</p>
         </div>
     {{-- creation time --}}
     <small class="card-footer bg-transparent float-left text-muted border-white">{{ $post->created_at->diffForHumans() }}</small>
