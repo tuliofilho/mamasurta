@@ -16,6 +16,6 @@
         @endif
     </div>
     <div class="form-group">
-        <button type="submit" class="btn btn-secondary">pronto, surtei</button>
+        <button type="submit" onclick="this.disabled=true;this.value='armazenando surto...';this.form.submit();" class="btn btn-secondary">pronto, surtei</button>
     </div>
 </form>
